@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');  
+
 * {
     margin: 0;
     padding: 0;
@@ -5,17 +7,23 @@
 
 /* CORPS DE LA PAGE */
 body {
-    background-color: hsl(212, 45%, 89%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(212, 45%, 89%); 
 }
 
 .container {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 150px;
 }
 
-/* .content-code-qr {}  */
+.content-code-qr {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 /* CONTAINER CODE-QR EN FOND BLANC  */
 .qr-code-container { 
@@ -23,16 +31,18 @@ body {
     justify-content: center;
     align-items: center;
     background-color: hsl(0, 0%, 100%);
-    border-radius: 25px;
+    margin-top: 150px;
+    border-radius: 30px;
     width: 310px;
     height: 470px;
 }
 
-/* .qr-code-image {}  */
-
 /* IMAGE CODE-QR */
 .qr-code-image img {
-    margin-top: -40px;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    margin-top: -25px;
     width: 290px;
     height: 290px;
     border-radius: 20px;
@@ -40,21 +50,48 @@ body {
 
 /* TITRE EN GRAS */
 .content-title {
-    margin-top: 10px;
+    margin-top: 20px;
     text-align: center;
-    font-family: Arial, sans-serif;
-    max-width: 255px;
+    font-family: 'Outfit', sans-serif;
+    max-width: 220px;
     font-weight: 700px;
-    color: hsl(218, 44%, 22%);
+    color: hsl(218, 44%, 22%); 
 }
 
 /* PARAGRAPHE */
 .qr-code-image p {
-    margin-top: 10px;
-    font-size: 15px;
+    margin-top: 20px;
+    font-size: 15px; /* Font size (paragraph): 15px */
     font-family: Arial, sans-serif;
     color: hsl(220, 15%, 55%);
     max-width: 245px; 
     text-align: center;
     font-weight: 400px;
+}
+
+.paragraphe {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+@media only screen and (max-width: 375px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: hsl(212, 45%, 89%); 
+    } 
+
+    .qr-code-container { 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: hsl(0, 0%, 100%);
+        margin-top: 100px;
+        border-radius: 30px;
+        width: 310px;
+        height: 470px;
+    }
 }
